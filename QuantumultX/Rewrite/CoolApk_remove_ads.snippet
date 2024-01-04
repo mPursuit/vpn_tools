@@ -9,7 +9,6 @@
 #[rewrite_local]
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch url reject-dict
 
-[Script]
 ^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\? url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script//CoolApk/CoolApk_remove_ads.js
 ^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init) url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script//CoolApk/CoolApk_remove_ads.js
 ^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\? url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script//CoolApk/CoolApk_remove_ads.js
