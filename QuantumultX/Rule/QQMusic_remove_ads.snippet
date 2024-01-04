@@ -1,0 +1,28 @@
+#!name = QQ音乐去广告
+#!desc = 过滤QQ音乐广告
+#!openUrl = 
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/QQMusic.png
+#!date = 2023-12-23 02:56:26
+
+[Rule]
+HOST, adstats.tencentmusic.com, REJECT
+HOST, ad.tencentmusic.com, REJECT
+HOST, adcdn.tencentmusic.com, REJECT
+HOST, adcdn6.tencentmusic.com, REJECT
+HOST, adexpo.tencentmusic.com, REJECT
+HOST, adclick.tencentmusic.com, REJECT
+HOST, otheve.beacon.qq.com, REJECT
+HOST, mazu.m.qq.com, REJECT
+HOST, monitor.music.qq.com, REJECT
+HOST, stat.y.qq.com, REJECT
+# 下面这条不可用REJECT-DROP，会显著延长开屏时间。
+HOST, tmead.y.qq.com, REJECT
+HOST, oth.str.mdt.qq.com, REJECT
+HOST, h.trace.qq.com, REJECT
+HOST, sdk.e.qq.com, REJECT
+HOST, p.l.qq.com, REJECT
+HOST, us.l.qq.com, REJECT
+HOST, tangram.e.qq.com, REJECT
+HOST-SUFFIX, imtmp.net, REJECT
