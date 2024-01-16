@@ -1,0 +1,14 @@
+#!name = 朴朴超市去广告
+#!desc = 去除朴朴超市开屏广告
+#!author = Ava阿檬
+#!homepage = https://github.com/mPursuit/vpn_tools/blob/main/QuantumultX/Rewrite/
+#!date = 2024-01-16 13:48:55
+
+#[rewrite_local]
+# > 朴朴超市
+# 开屏广告 感谢@Ava阿檬分享
+^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=2(%[A-Z0-9]+)+&store_id url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js
+^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position url reject
+
+#[mitm]
+hostname = j1.pupuapi.com
