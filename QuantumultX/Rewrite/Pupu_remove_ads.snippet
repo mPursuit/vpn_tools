@@ -8,6 +8,7 @@
 # > 朴朴超市
 # 开屏广告 感谢@Ava阿檬分享
 ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=2(%[A-Z0-9]+)+&store_id url script-response-body https://raw.githubusercontent.com/mPursuit/vpn_tools/main/Resource/Script/pupu_remove_ads.js
+^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=(?!2)(.*)&store_id url reject
 
 #[mitm]
 hostname = j1.pupuapi.com
