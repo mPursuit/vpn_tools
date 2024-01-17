@@ -1,0 +1,15 @@
+#!name=朴朴超市去广告
+#!desc=去除朴朴超市开屏广告
+#!author=Pursuit
+#!homepage=https://github.com/mPursuit/vpn_tools/blob/main/Loon/Plugin
+#!date=2024-01-16 13:48:55
+
+[Rewrite]
+^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=(?!2)(.*)&store_id= reject
+
+[Script]
+# 开屏广告 感谢@Ava阿檬分享
+http-response ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=2(%[A-Z0-9]+)+&store_id script-path=https://raw.githubusercontent.com/mPursuit/vpn_tools/main/Resource/Script/pupu_remove_ads.js, requires-body=true, timeout=60, tag=pupu_remove_ads
+
+[MITM]
+hostname = j1.pupuapi.com
