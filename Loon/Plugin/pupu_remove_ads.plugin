@@ -5,7 +5,7 @@
 #!date=2024-01-16 13:48:55
 
 [Rewrite]
-^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=(?!2)(.*)&store_id= reject
+^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=(?!2)(.*)&store_id reject
 
 [Script]
 # 开屏广告 感谢@Ava阿檬分享
