@@ -1,0 +1,14 @@
+#!name=京东养车去广告
+#!desc=去除京东养车广告
+#!author=Pursuit
+#!homepage=https://github.com/mPursuit/vpn_tools/blob/main/Loon/Plugin
+#!date=2024-01-16 13:48:55
+
+[Script]
+# 开屏广告
+^https?:\/\/api\.m\.jd\.com\/api\?functionId=jch_nv_index_launch_ad reject-dict
+# 弹窗推广
+^https?:\/\/api\.m\.jd\.com\/api\?functionId=jch_nv_index_data reject-dict
+
+[MITM]
+hostname = api.m.jd.com
