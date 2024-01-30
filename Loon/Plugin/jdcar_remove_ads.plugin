@@ -8,7 +8,7 @@
 # 开屏广告
 ^https?:\/\/api\.m\.jd\.com\/api\?functionId=jch_nv_index_launch_ad reject-dict
 # 弹窗推广
-^https?:\/\/api\.m\.jd\.com\/api\?functionId=jch_nv_index_data reject-dict
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=jch_nv_index_data reject-dict
 
 [MITM]
 hostname = api.m.jd.com
