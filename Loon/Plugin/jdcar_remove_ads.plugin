@@ -15,7 +15,10 @@
 # > 盒马
 # hostname = acs.m.taobao.com
 # 开屏广告 感谢【Dragon】分享
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.wdk\.render\.querysinglepage\/3\.0 url reject-200
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.wdk\.render\.querysinglepage\/3\.0 reject-200
+
+#大麦
+^http:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome\/ reject-dict
 
 [MITM]
 hostname = api.m.jd.com,acs.m.taobao.com
