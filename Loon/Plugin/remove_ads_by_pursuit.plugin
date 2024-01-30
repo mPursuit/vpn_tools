@@ -3,8 +3,8 @@
 #!author=Pursuit
 #!homepage=https://github.com/mPursuit/vpn_tools/blob/main/Loon/Plugin
 #!date=2024-01-16 13:48:55
-
 [Rewrite]
+
 # > 京东养车
 # hostname = api.m.jd.com
 # 开屏广告
@@ -30,10 +30,37 @@ http:\/\/appgw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list reject-dict
 # > 易捷加油
 # hostname = a.sinopecsales.com
 # 开屏和活动广告
-^https:\/\/a\.sinopecsales\.com\/app\/cms\/AppCmsPage\.json url reject-dict
+^https:\/\/a\.sinopecsales\.com\/app\/cms\/AppCmsPage\.json reject-dict
+
+# > 招商银行
+# hostname = webappcfg.paas.cmbchina.com
+# 开屏广告
+^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig reject-200
+# 首页横幅广告
+^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic reject-dict
+
+# > 掌上生活
+# hostname = mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com
+# 开屏广告
+^https:\/\/mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec reject-dict
+# 设置栏目内广告
+^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec reject
+# 首页随机弹窗
+^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId reject-dict
+
+# > 中国银行
+# hostname = mbs.boc.cn, mlife.jf365.boc.cn
+^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg reject-200
+# > 中国银行 缤纷生活
+^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 reject-200
+
+# > 中国电信
+# hostname = cloud.189.cn, zt-app.go189.cn
+^https?:\/\/cloud\.189\.cn\/include\/splash\/ reject
+^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation reject-img
 
 
 [Script]
 
 [MITM]
-hostname = api.m.jd.com,acs.m.taobao.com,appgw.ddpai.com,a.sinopecsales.com
+hostname = api.m.jd.com,acs.m.taobao.com,appgw.ddpai.com,a.sinopecsales.com,webappcfg.paas.cmbchina.com,mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com,mbs.boc.cn, mlife.jf365.boc.cn,cloud.189.cn, zt-app.go189.cn
