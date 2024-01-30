@@ -17,7 +17,9 @@
 # 开屏广告 感谢【Dragon】分享
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.wdk\.render\.querysinglepage\/3\.0 reject-200
 
-#大麦
+# > 大麦
+# hostname = acs.m.taobao.com
+# 开屏广告
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome\/ reject-dict
 
 # > 盯盯拍
@@ -25,7 +27,13 @@
 # 开屏广告
 http:\/\/appgw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list reject-dict
 
+# > 易捷加油
+# hostname = a.sinopecsales.com
+# 开屏和活动广告
+^https:\/\/a\.sinopecsales\.com\/app\/cms\/AppCmsPage\.json url reject-dict
+
+
 [Script]
 
 [MITM]
-hostname = api.m.jd.com,acs.m.taobao.com,appgw.ddpai.com
+hostname = api.m.jd.com,acs.m.taobao.com,appgw.ddpai.com,a.sinopecsales.com
