@@ -20,7 +20,12 @@
 #大麦
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome\/ reject-dict
 
+# > 盯盯拍
+# hostname = appgw.ddpai.com
+# 开屏广告
+http:\/\/appgw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list reject-dict
+
 [Script]
 
 [MITM]
-hostname = api.m.jd.com,acs.m.taobao.com
+hostname = api.m.jd.com,acs.m.taobao.com,appgw.ddpai.com
