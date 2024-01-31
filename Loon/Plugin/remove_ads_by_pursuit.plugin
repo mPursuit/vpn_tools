@@ -4,6 +4,8 @@
 #!homepage=https://github.com/mPursuit/vpn_tools/blob/main/Loon/Plugin
 #!date=2024-01-16 13:48:55
 
+[Rule]
+
 
 
 [Rewrite]
@@ -78,8 +80,78 @@ http:\/\/appgw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list reject-dict
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/json\/tripAds reject-200
 ^https:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare reject
 
+# > 讯飞
+# hostname = imeclient.openspeech.cn
+^https?:\/\/imeclient\.openspeech\.cn\/adservice\/ reject-200
+
+# > 中国移动
+# hostname = client.app.coc.10086.cn, h.client.app.coc.10086.cn
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit reject-200
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList reject
+# 多个悬浮窗
+^https:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket reject
+
+# > 中国联通
+# hostname = m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd reject-200
+^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) reject-img
+^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/getclientconfig\.htm reject-dict
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) reject-img
+^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js) reject-img
+^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3} reject-img
+^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= reject-img
+
+# > 淘淘阅读
+# hostname = bid.adview.cn
+# 感谢【Baby】分享
+^https?:\/\/bid\.adview\.cn\/agent\/getAd reject
+
+# > 同花顺
+# hostname = adm.10jqka.com.cn, iphone.ac.qq.com, stat.10jqka.com.cn
+^https?:\/\/adm\.10jqka\.com\.cn\/interface\/ad\/recommend reject-200
+^https?:\/\/iphone\.ac\.qq\.com\/.*\/Support\/(getSystemConf|bootScreen) reject
+# 同花顺至尊版 感谢【梭哈 All in】分享
+^https:\/\/stat\.10jqka\.com\.cn\/q\?ld=mobile&id=ad reject-dict
+
+# > 顺丰快递小程序
+# hostname = mcs-mimp-web.sf-express.com, ucmp.sf-express.com
+^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/integralPlanet\/getCxAdvertiseList reject-dict
+^https:\/\/ucmp-static\.sf-express\.com\/proxy\/wxbase\/wxTicket\/wxLiveStreamInfo\?pageNo reject-dict
+^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberGoods\/pointMallService\/goodsList reject-dict
+^https:\/\/ucmp\.sf-express\.com\/proxy\/operation-platform\/info-flow-adver\/query reject-dict
+^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberManage\/memberEquity\/queryRecommendEquity reject-dict
+^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberActLengthy\/fullGiveActivityService\/fullGiveInfo reject-dict
+
+# > 拼多多
+# hostname = api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com
+^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash reject
+
+# > 脉脉
+# hostname = open.taou.com, api.taou.com, track.mm.taou.com, i9.taou.com
+^https?:\/\/open\.taou\.com\/maimai\/(launch_ad|ad?) reject
+^https?:\/\/api\.taou\.com\/sdk\/global\/splash_ad reject
+^https?:\/\/track\.mm\.taou\.com/v\d\/track reject
+^https?:\/\/i9\.taou\.com\/maimai\/p\/[0-9]{5}\/[0-9]{3,4}_[0-9]{3}_[a-zA-Z0-9]{16}$ reject-200
+
+# > 美味不用等
+# hostname = capi.mwee.cn
+^https?:\/\/capi\.mwee\.cn\/app-api\/V\d{2}\/app\/(ad|getstartad) reject
+
+# > 工商银行
+# hostname = v.icbc.com.cn
+# 如开启可自行添加主机名
+^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ reject-200
+
+# > 爱思助手
+# hostname = list-app-m.i4.cn
+^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml reject
+
+# > 12123
+# hostname = gab.122.gov.cn
+^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery reject
+
 
 [Script]
 
 [MITM]
-hostname = api.m.jd.com,acs.m.taobao.com,appgw.ddpai.com,a.sinopecsales.com,webappcfg.paas.cmbchina.com,mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com,mbs.boc.cn, mlife.jf365.boc.cn,cloud.189.cn, zt-app.go189.cn,img.meituan.net,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com
+hostname = api.m.jd.com,acs.m.taobao.com,appgw.ddpai.com,a.sinopecsales.com,webappcfg.paas.cmbchina.com,mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com,mbs.boc.cn, mlife.jf365.boc.cn,cloud.189.cn, zt-app.go189.cn,img.meituan.net,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com,imeclient.openspeech.cn,client.app.coc.10086.cn, h.client.app.coc.10086.cn,m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn,bid.adview.cn,adm.10jqka.com.cn, iphone.ac.qq.com, stat.10jqka.com.cn,mcs-mimp-web.sf-express.com, ucmp.sf-express.com,api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com,open.taou.com, api.taou.com, track.mm.taou.com, i9.taou.com,capi.mwee.cn,v.icbc.com.cn,list-app-m.i4.cn,gab.122.gov.cn
