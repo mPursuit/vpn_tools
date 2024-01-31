@@ -3,6 +3,9 @@
 #!author=Pursuit
 #!homepage=https://github.com/mPursuit/vpn_tools/blob/main/Loon/Plugin
 #!date=2024-01-16 13:48:55
+
+
+
 [Rewrite]
 
 # > 京东养车
@@ -59,8 +62,24 @@ http:\/\/appgw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list reject-dict
 ^https?:\/\/cloud\.189\.cn\/include\/splash\/ reject
 ^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation reject-img
 
+# > 大众点评
+# hostname = img.meituan.net
+# 开屏广告
+^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png reject-dict
+^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) reject-200
+
+# > 携程
+# hostname = m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com
+# 更新弹窗 APP降级8.40.0版本搭配去开屏广告规则，目前没有出现MITM失败等其他问题 如开启可自行添加主机名 m.ctrip.com
+^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/[0-9]{5}\/json\/getTimeZoneServerIpList\?__gw_os=IOS reject-200
+# 开屏去广告
+^https:\/\/ma-adx\.ctrip\.com\/_ma\.gif reject
+# 8.47.0以上版本会有部分图片加载不出来
+^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/json\/tripAds reject-200
+^https:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare reject
+
 
 [Script]
 
 [MITM]
-hostname = api.m.jd.com,acs.m.taobao.com,appgw.ddpai.com,a.sinopecsales.com,webappcfg.paas.cmbchina.com,mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com,mbs.boc.cn, mlife.jf365.boc.cn,cloud.189.cn, zt-app.go189.cn
+hostname = api.m.jd.com,acs.m.taobao.com,appgw.ddpai.com,a.sinopecsales.com,webappcfg.paas.cmbchina.com,mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com,mbs.boc.cn, mlife.jf365.boc.cn,cloud.189.cn, zt-app.go189.cn,img.meituan.net,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com
