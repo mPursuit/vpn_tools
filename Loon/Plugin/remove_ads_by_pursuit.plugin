@@ -157,8 +157,18 @@ http:\/\/appgw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list reject-dict
 # 底部横幅广告
 ^https:\/\/minipro\.95504\.net\/app\/json\/ad\/getIndexAdData reject-dict
 
+# > 雪球
+# hostname = api.xueqiu.com, xqimg.imedao.com
+# 开屏广告 感谢【Runestoner】分享
+^https:\/\/api\.xueqiu\.com\/brand\/search\/v1\.json\? reject
+^https?:\/\/xqimg\.imedao\.com\/[a-z0-9]{24}\.jpg$ reject-200
+# 感谢【Joe Joy】分享
+^https:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json\? reject-dict
+# 去除首页的广告
+^https:\/\/api.xueqiu.com\/ucprofile\/api\/user\/batchGetUserBasicInfo.json reject-dict
+
 
 [Script]
 
 [MITM]
-hostname = api.m.jd.com,acs.m.taobao.com,appgw.ddpai.com,a.sinopecsales.com,webappcfg.paas.cmbchina.com,mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com,mbs.boc.cn, mlife.jf365.boc.cn,cloud.189.cn, zt-app.go189.cn,img.meituan.net,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com,imeclient.openspeech.cn,client.app.coc.10086.cn, h.client.app.coc.10086.cn,m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn,bid.adview.cn,adm.10jqka.com.cn, iphone.ac.qq.com, stat.10jqka.com.cn,mcs-mimp-web.sf-express.com, ucmp.sf-express.com,api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com,open.taou.com, api.taou.com, track.mm.taou.com, i9.taou.com,capi.mwee.cn,v.icbc.com.cn,list-app-m.i4.cn,gab.122.gov.cn,minipro.95504.net
+hostname = api.m.jd.com,acs.m.taobao.com,appgw.ddpai.com,a.sinopecsales.com,webappcfg.paas.cmbchina.com,mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com,mbs.boc.cn, mlife.jf365.boc.cn,cloud.189.cn, zt-app.go189.cn,img.meituan.net,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com,imeclient.openspeech.cn,client.app.coc.10086.cn, h.client.app.coc.10086.cn,m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn,bid.adview.cn,adm.10jqka.com.cn, iphone.ac.qq.com, stat.10jqka.com.cn,mcs-mimp-web.sf-express.com, ucmp.sf-express.com,api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com,open.taou.com, api.taou.com, track.mm.taou.com, i9.taou.com,capi.mwee.cn,v.icbc.com.cn,list-app-m.i4.cn,gab.122.gov.cn,minipro.95504.net,api.xueqiu.com, xqimg.imedao.com
