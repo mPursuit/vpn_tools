@@ -7,7 +7,7 @@ proxy-providers:
     path: ./proxies/airport1.yaml
     interval: 43200
     # 初步筛选需要的节点，可有效减轻路由器压力，支持正则表达式，不筛选可删除此配置项
-    filter: '^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$'
+    filter: "^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$"
     health-check:
       enable: true
       # 未选择到当前代理集合时，不会进行测试，有多个代理集合时可使用
@@ -20,7 +20,7 @@ proxy-providers:
     url: "https://c3vi.5yw754yq5zy6.com/api/v1/client/subscribe?token=143bd3b91f6a8b2637d2c1bd44cfa046"
     path: ./proxies/airport2.yaml
     interval: 43200
-    filter: '^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$'
+    filter: "^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$"
     health-check:
       enable: true
       lazy: true
@@ -33,7 +33,7 @@ proxy-providers:
     url: "https://fn1.feiniaoyun13.life/api/v1/client/subscribe?token=b451caf5090ccf6c5563b0c0a345be95"
     path: ./proxies/airport3.yaml
     interval: 43200
-    filter: '^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$'
+    filter: "^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$"
     health-check:
       enable: true
       lazy: true
@@ -47,7 +47,7 @@ proxy-providers:
     url: https://bestsub.bestrui.ggff.net/share/bestsub/cdcefaa4-1f0d-462e-ba76-627b344989f2/all.yaml
     path: ./proxies/airport4.yaml
     interval: 43200
-    filter: '^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$'
+    filter: "^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$"
     health-check:
       enable: true
       lazy: true
@@ -61,7 +61,7 @@ proxy-providers:
     url: "https://jfalq.no-mad-world.club/link/gt12SlhKey1azJEm?clash=3&extend=1"
     path: ./proxies/airport5.yaml
     interval: 43200
-    filter: '^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$'
+    filter: "^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$"
     health-check:
       enable: true
       lazy: true
@@ -74,7 +74,7 @@ proxy-providers:
     url: "https://api-hy.02000.net/api/v1/client/subscribe?token=23e8e66ff9ebbb8ca61c12db8e2fa310"
     path: ./proxies/airport6.yaml
     interval: 43200
-    filter: '^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$'
+    filter: "^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$"
     health-check:
       enable: true
       lazy: true
@@ -132,23 +132,23 @@ proxy-groups:
   # ----------------国家或地区策略组---------------------
 
   # 自动选择节点，即按照 url 测试结果使用延迟最低的节点；测试后容差大于 100ms 才会切换到延迟低的那个节点；未选择到当前策略组时不会进行延迟测试；筛选出“香港”节点，支持正则表达式
-  - {name: FAST 全球超快节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: '(?=.*(港|HK|(?i)Hong|台|TW|(?i)Taiwan|日本|JP|(?i)Japan|新|狮|獅|SG|(?i)Singapore))^((?!(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|以下)).)*$'}
+  - {name: FAST 全球超快节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: "(?=.*(港|HK|(?i)Hong|台|TW|(?i)Taiwan|日本|JP|(?i)Japan|新|狮|獅|SG|(?i)Singapore))^((?!(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|以下)).)*$"}
 
-  - {name: Global 全球节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: '(?=.*(港|HK|(?i)Hong|台|TW|(?i)Taiwan|日本|JP|(?i)Japan|新|狮|獅|SG|(?i)Singapore))^((?!(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|以下|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$'}
+  - {name: Global 全球节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: "(?=.*(港|HK|(?i)Hong|台|TW|(?i)Taiwan|日本|JP|(?i)Japan|新|狮|獅|SG|(?i)Singapore))^((?!(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|以下|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$"}
 
-  - {name: 🇭🇰 香港节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: '(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$'}
+  - {name: 🇭🇰 香港节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$"}
 
-  - {name: 🇹🇼 台湾节点, type: url-test, strategy: consistent-hashing, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: '(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$'}
+  - {name: 🇹🇼 台湾节点, type: url-test, strategy: consistent-hashing, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$"}
 
-  - {name: 🇯🇵 日本节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: '(?=.*(日本|JP|(?i)Japan))^((?!(港|台|韩|新|美|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$'}
+  - {name: 🇯🇵 日本节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: "(?=.*(日本|JP|(?i)Japan))^((?!(港|台|韩|新|美|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$"}
 
-  - {name: 🇸🇬 狮城节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: '(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$'}
+  - {name: 🇸🇬 狮城节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: "(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$"}
 
-  - {name: 🇺🇸 美国节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: '(?=.*(美|US|(?i)States|American))^((?!(港|台|日|韩|新|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$'}
+  - {name: 🇺🇸 美国节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: "(?=.*(美|US|(?i)States|American))^((?!(港|台|日|韩|新|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$"}
 
-  - {name: AI节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: '(?=.*(GPT|gpt|Gpt|ai|AI|Ai))^((?!(taiwan|Taiwan|Baidu|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$'}
+  - {name: AI节点, type: url-test, tolerance: 50, lazy: true, use: [一元机场, 养猪场, 飞鸟云, AFun, ikuu, cac], filter: "(?=.*(GPT|gpt|Gpt|ai|AI|Ai))^((?!(taiwan|Taiwan|Baidu|(?<!\.)[2-9]倍|\d{2,}倍|(?<!\.)[2-9]x|\d{2,}x)).)*$"}
 
-  - {name: 免费节点, type: url-test, tolerance: 50, lazy: true, use: [AFun, ikuu, cac], filter: '^((?!(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|更新|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|刷新|特别|访问|支持|河南|以下|🎮|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\d{0,2}\b|(\d{4}-\d{2}-\d{2}|\dG)))).)*$'}
+  - {name: 免费节点, type: url-test, tolerance: 50, lazy: true, use: [AFun, ikuu, cac], filter: "^((?!(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|更新|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|刷新|特别|访问|支持|河南|以下|🎮|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\d{0,2}\b|(\d{4}-\d{2}-\d{2}|\dG)))).)*$"}
 
 
 # 规则集（yaml 文件每天自动更新）
