@@ -10,6 +10,15 @@
 
 [Rewrite]
 
+
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs reject-200
+^https?:\/\/dss0\.bdstatic\.com\/-0U0bnSm1A5BphGlnYG\/ reject-200
+^https?:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4) reject
+^https?:\/\/tb1\.bdstatic\.com\/tb\/cms\/ngmis\/adsense\/*.jpg reject
+^https?:\/\/tb2\.bdstatic\.com\/tb\/mobile\/spb\/widget\/jump reject-img
+^https?:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg reject-200
+^https?:\/\/gss0\.bdstatic\.com\/.+?\/static\/wiseindex\/img\/bd_red_packet\.png reject-img
+
 # > 京东养车
 # hostname = api.m.jd.com
 # 开屏广告
@@ -168,7 +177,11 @@ http:\/\/appgw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list reject-dict
 ^https:\/\/api.xueqiu.com\/ucprofile\/api\/user\/batchGetUserBasicInfo.json reject-dict
 
 
+
+
 [Script]
+http-response ^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/baidumap.js, requires-body=true, timeout=60, tag=百度地图广告
+
 
 [MITM]
-hostname = api.m.jd.com,acs.m.taobao.com,appgw.ddpai.com,a.sinopecsales.com,webappcfg.paas.cmbchina.com,mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com,mbs.boc.cn, mlife.jf365.boc.cn,cloud.189.cn, zt-app.go189.cn,img.meituan.net,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com,imeclient.openspeech.cn,client.app.coc.10086.cn, h.client.app.coc.10086.cn,m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn,bid.adview.cn,adm.10jqka.com.cn, iphone.ac.qq.com, stat.10jqka.com.cn,mcs-mimp-web.sf-express.com, ucmp.sf-express.com,api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com,open.taou.com, api.taou.com, track.mm.taou.com, i9.taou.com,capi.mwee.cn,v.icbc.com.cn,list-app-m.i4.cn,gab.122.gov.cn,minipro.95504.net,api.xueqiu.com, xqimg.imedao.com
+hostname = m.360buyimg.com,dss0.bdstatic.com,tb1.bdstatic.com,tb2.bdstatic.com,ss0.bdstatic.com,gss0.bdstatic.com,newclient.map.baidu.com,api.m.jd.com,acs.m.taobao.com,appgw.ddpai.com,a.sinopecsales.com,webappcfg.paas.cmbchina.com,mbasecc.bas.cmbchina.com, intellicc.bas.cmbchina.com,mbs.boc.cn, mlife.jf365.boc.cn,cloud.189.cn, zt-app.go189.cn,img.meituan.net,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com,imeclient.openspeech.cn,client.app.coc.10086.cn, h.client.app.coc.10086.cn,m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn,bid.adview.cn,adm.10jqka.com.cn, iphone.ac.qq.com, stat.10jqka.com.cn,mcs-mimp-web.sf-express.com, ucmp.sf-express.com,api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com,open.taou.com, api.taou.com, track.mm.taou.com, i9.taou.com,capi.mwee.cn,v.icbc.com.cn,list-app-m.i4.cn,gab.122.gov.cn,minipro.95504.net,api.xueqiu.com, xqimg.imedao.com
