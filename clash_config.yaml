@@ -3,7 +3,7 @@ proxy-providers:
   一元机场:
     type: http
     # 机场订阅链接，使用 Clash 链接
-    url: "https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=c7cc0015d9faa3bbb3bfb3fc3aae7557"
+    url: ""
     path: ./proxies/airport1.yaml
     interval: 43200
     # 初步筛选需要的节点，可有效减轻路由器压力，支持正则表达式，不筛选可删除此配置项
@@ -17,7 +17,7 @@ proxy-providers:
 
   养猪场:
     type: http
-    url: "https://c3vi.5yw754yq5zy6.com/api/v1/client/subscribe?token=143bd3b91f6a8b2637d2c1bd44cfa046"
+    url: ""
     path: ./proxies/airport2.yaml
     interval: 43200
     filter: "^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$"
@@ -30,7 +30,7 @@ proxy-providers:
 
   飞鸟云:
     type: http
-    url: "https://fn1.feiniaoyun13.life/api/v1/client/subscribe?token=b451caf5090ccf6c5563b0c0a345be95"
+    url: ""
     path: ./proxies/airport3.yaml
     interval: 43200
     filter: "^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$"
@@ -44,7 +44,7 @@ proxy-providers:
 
   AFun:
     type: http
-    url: https://bestsub.bestrui.ggff.net/share/bestsub/cdcefaa4-1f0d-462e-ba76-627b344989f2/all.yaml
+    url: ""
     path: ./proxies/airport4.yaml
     interval: 43200
     filter: "^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$"
@@ -58,7 +58,7 @@ proxy-providers:
 
   ikuu:
     type: http
-    url: "https://jfalq.no-mad-world.club/link/gt12SlhKey1azJEm?clash=3&extend=1"
+    url: ""
     path: ./proxies/airport5.yaml
     interval: 43200
     filter: "^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$"
@@ -71,7 +71,7 @@ proxy-providers:
 
   cac:
     type: http
-    url: "https://api-hy.02000.net/api/v1/client/subscribe?token=23e8e66ff9ebbb8ca61c12db8e2fa310"
+    url: ""
     path: ./proxies/airport6.yaml
     interval: 43200
     filter: "^(?!.*?(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|河南|刷新|以下)).*$"
