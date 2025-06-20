@@ -5,7 +5,10 @@
 #!date=2024-01-16 13:48:55
 
 [Rule]
-
+#百度地图开屏
+DOMAIN,aispace.baidu.com,REJECT-DROP
+DOMAIN,ecom.map.baidu.com,REJECT-DROP
+DOMAIN,sofire.baidu.com,REJECT-DROP
 
 
 [Rewrite]
