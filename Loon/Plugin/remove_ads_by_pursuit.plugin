@@ -5,12 +5,11 @@
 #!date=2024-01-16 13:48:55
 
 [Rule]
-#百度地图开屏
-DOMAIN,ecom.map.baidu.com,REJECT-DROP
 
 
 [Rewrite]
-
+#百度地图开屏
+^https:\/\/ecom\.map\.baidu\.com\/ad-ops\/afd\/entry\? reject-dict
 
 ^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs reject-200
 ^https?:\/\/dss0\.bdstatic\.com\/-0U0bnSm1A5BphGlnYG\/ reject-200
@@ -26,4 +25,4 @@ DOMAIN,ecom.map.baidu.com,REJECT-DROP
 
 
 [MITM]
-hostname = m.360buyimg.com,dss0.bdstatic.com,tb1.bdstatic.com,tb2.bdstatic.com,ss0.bdstatic.com,gss0.bdstatic.com,newclient.map.baidu.com
+hostname = m.360buyimg.com,dss0.bdstatic.com,tb1.bdstatic.com,tb2.bdstatic.com,ss0.bdstatic.com,gss0.bdstatic.com,newclient.map.baidu.com,ecom.map.baidu.com
