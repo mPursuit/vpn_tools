@@ -115,23 +115,6 @@ DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 # hostname = apps.api.ke.com
 ^https?:\/\/apps\.api\.ke\.com\/config\/config\/(bootpage|getactivityconfig) reject
 
-# > 汽水音乐
-# hostname = webcast-open.douyin.com, beta-luna.douyin.com, ether-pack.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao?.com, sf*-fe-tos.pglstatp-toutiao.com, lf-cdn-tos.bytescm.com
-# 感谢【可莉】分享
-# 发现页面 正在直播
-^https:\/\/webcast-open\.douyin\.com\/webcast\/openapi\/feed\/\? reject-dict
-# 播放器界面 - 关联提示语及你关注的人喜欢了
-^https:\/\/beta-luna\.douyin\.com\/luna\/card\? response-body-json-replace card_items[0].priority_display false card_items[0].is_show false preview_guide null
-# 歌曲详情 - 热门视频
-^https:\/\/beta-luna\.douyin\.com\/luna\/more-panel\? response-body-json-del blocks[1]
-# 邀请开通会员弹窗
-^https:\/\/beta-luna\.douyin\.com\/luna\/commerce\/v2\/commerce_info\? reject-dict
-# 字节跳动广告
-^https:\/\/ether-pack\.pangolin-sdk-toutiao\.com\/union\/endcard\/ reject
-^https:\/\/api-access\.pangolin-sdk-toutiao\d?\.com\/api\/ad\/ reject
-^https:\/\/sf\d+-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/ reject
-^https:\/\/lf-cdn-tos\.bytescm\.com\/obj\/static\/ad\/ reject
-
 # > 字节跳动
 # hostname = *.pstatp.com, amemv.com, musical.com, snssdk.com, tiktokv.com, dsp.toutiao.com
 #^https?:\/\/.+\.pstatp\.com\/img\/ad reject-200
@@ -267,4 +250,4 @@ https://ios.sspai.com/api/v3/recommend/page/get\?ad.*ios_home_modal reject
 http-response ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(?>indexpage|mypage|tabfeedstream) script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/freshippo.js, requires-body=true, timeout=60, tag=盒马, enable=true
 
 [MITM]
-hostname = us.l.qq.com, ossweb-img.qq.com, mlol.qt.qq.com,minipro.95504.net,m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn,mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, intellicc.bcs.cmbchina.com,webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com,ocrifs.ejoy.sinopec.com,a.sinopecsales.com,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com,home.mi.com,api.wfdata.club,osg-static.sgcc.com.cn, osg-service.sgcc.com.cn,acs.m.taobao.com,*.ly.com, *.17usoft.com, *.17u.cn, mobilehotelapi.elong.com, quic-tcmapi.elong.com,api.ncarzone.com,m.360buyimg.com,dss0.bdstatic.com,tb1.bdstatic.com,tb2.bdstatic.com,ss0.bdstatic.com,gss0.bdstatic.com,newclient.map.baidu.com,ecom.map.baidu.com,iobs.pingan.com.cn, hcz-member.pingan.com.cn,*.pglstatp-toutiao.com, api.htp.ad-scope.com.cn, appgw.ddpai.com, init.sms.mob.com, apphw.ddpai.com,mkt-gateway.tuhu.cn,mapi-app.bestpay.com.cn,acs.m.taobao.com, acs-m.freshippo.com,cloud.189.cn, zt-app.go189.cn,apps.api.ke.com,webcast-open.douyin.com, beta-luna.douyin.com, ether-pack.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao?.com, sf*-fe-tos.pglstatp-toutiao.com, lf-cdn-tos.bytescm.com,*.pstatp.com, amemv.com, musical.com, snssdk.com, tiktokv.com, dsp.toutiao.com,ios.sspai.com,api-sams.walmartmobile.cn
+hostname = us.l.qq.com, ossweb-img.qq.com, mlol.qt.qq.com,minipro.95504.net,m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn,mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, intellicc.bcs.cmbchina.com,webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com,ocrifs.ejoy.sinopec.com,a.sinopecsales.com,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com,home.mi.com,api.wfdata.club,osg-static.sgcc.com.cn, osg-service.sgcc.com.cn,acs.m.taobao.com,*.ly.com, *.17usoft.com, *.17u.cn, mobilehotelapi.elong.com, quic-tcmapi.elong.com,api.ncarzone.com,m.360buyimg.com,dss0.bdstatic.com,tb1.bdstatic.com,tb2.bdstatic.com,ss0.bdstatic.com,gss0.bdstatic.com,newclient.map.baidu.com,ecom.map.baidu.com,iobs.pingan.com.cn, hcz-member.pingan.com.cn,*.pglstatp-toutiao.com, api.htp.ad-scope.com.cn, appgw.ddpai.com, init.sms.mob.com, apphw.ddpai.com,mkt-gateway.tuhu.cn,mapi-app.bestpay.com.cn,acs.m.taobao.com, acs-m.freshippo.com,cloud.189.cn, zt-app.go189.cn,apps.api.ke.com,*.pstatp.com, amemv.com, musical.com, snssdk.com, tiktokv.com, dsp.toutiao.com,ios.sspai.com,api-sams.walmartmobile.cn
