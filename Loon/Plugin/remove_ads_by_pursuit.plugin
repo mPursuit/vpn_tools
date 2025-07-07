@@ -201,9 +201,11 @@ https://ios.sspai.com/api/v3/recommend/page/get\?ad.*ios_home_modal reject
 ^https?:\/\/a\.sinopecsales\.com\/app\/cms reject-dict
 
 # > 易捷加油小程序
-# hostname = ocrifs.ejoy.sinopec.com
+# hostname = ocrifs.ejoy.sinopec.com, ne.gdsz.sinopec.com
 # 底部横幅广告
 ^https?:\/\/ocrifs\.ejoy\.sinopec\.com\/advertitfs\/advert\/findAdvertInfo reject-dict
+#小程序易捷加油，石化易电  去除红包弹窗（恶心的一批打开一次弹一次）
+^https:\/\/ne\.gdsz\.sinopec\.com\/gateway\/api\/omp\/mt\/appAdvertising\/queryAdvertisingByParams url reject-dict
 
 # > 招商银行
 # hostname = webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com
@@ -250,4 +252,4 @@ https://ios.sspai.com/api/v3/recommend/page/get\?ad.*ios_home_modal reject
 http-response ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(?>indexpage|mypage|tabfeedstream) script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/freshippo.js, requires-body=true, timeout=60, tag=盒马, enable=true
 
 [MITM]
-hostname = us.l.qq.com, ossweb-img.qq.com, mlol.qt.qq.com,minipro.95504.net,m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn,mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, intellicc.bcs.cmbchina.com,webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com,ocrifs.ejoy.sinopec.com,a.sinopecsales.com,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com,home.mi.com,api.wfdata.club,osg-static.sgcc.com.cn, osg-service.sgcc.com.cn,acs.m.taobao.com,*.ly.com, *.17usoft.com, *.17u.cn, mobilehotelapi.elong.com, quic-tcmapi.elong.com,api.ncarzone.com,m.360buyimg.com,dss0.bdstatic.com,tb1.bdstatic.com,tb2.bdstatic.com,ss0.bdstatic.com,gss0.bdstatic.com,newclient.map.baidu.com,ecom.map.baidu.com,iobs.pingan.com.cn, hcz-member.pingan.com.cn,*.pglstatp-toutiao.com, api.htp.ad-scope.com.cn, appgw.ddpai.com, init.sms.mob.com, apphw.ddpai.com,mkt-gateway.tuhu.cn,mapi-app.bestpay.com.cn,acs.m.taobao.com, acs-m.freshippo.com,cloud.189.cn, zt-app.go189.cn,apps.api.ke.com,*.pstatp.com, amemv.com, musical.com, snssdk.com, tiktokv.com, dsp.toutiao.com,ios.sspai.com,api-sams.walmartmobile.cn
+hostname = ne.gdsz.sinopec.com, us.l.qq.com, ossweb-img.qq.com, mlol.qt.qq.com,minipro.95504.net,m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn,mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, intellicc.bcs.cmbchina.com,webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com,ocrifs.ejoy.sinopec.com,a.sinopecsales.com,m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com,home.mi.com,api.wfdata.club,osg-static.sgcc.com.cn, osg-service.sgcc.com.cn,acs.m.taobao.com,*.ly.com, *.17usoft.com, *.17u.cn, mobilehotelapi.elong.com, quic-tcmapi.elong.com,api.ncarzone.com,m.360buyimg.com,dss0.bdstatic.com,tb1.bdstatic.com,tb2.bdstatic.com,ss0.bdstatic.com,gss0.bdstatic.com,newclient.map.baidu.com,ecom.map.baidu.com,iobs.pingan.com.cn, hcz-member.pingan.com.cn,*.pglstatp-toutiao.com, api.htp.ad-scope.com.cn, appgw.ddpai.com, init.sms.mob.com, apphw.ddpai.com,mkt-gateway.tuhu.cn,mapi-app.bestpay.com.cn,acs.m.taobao.com, acs-m.freshippo.com,cloud.189.cn, zt-app.go189.cn,apps.api.ke.com,*.pstatp.com, amemv.com, musical.com, snssdk.com, tiktokv.com, dsp.toutiao.com,ios.sspai.com,api-sams.walmartmobile.cn
