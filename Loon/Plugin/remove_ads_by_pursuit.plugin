@@ -8,6 +8,16 @@
 alyp_enable = switch,true,false,tag=阿里云盘-脚本开关
 
 [Rule]
+DOMAIN,dns.weixin.qq.com.cn,DIRECT
+DOMAIN,dns.weixin.qq.com,DIRECT
+DOMAIN-SUFFIX,qingtian618.com,DIRECT
+DOMAIN-SUFFIX,live.com,DIRECT
+DOMAIN-SUFFIX,microsoft.com,DIRECT
+DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+DOMAIN-SUFFIX,speedtest.net,DIRECT
+DOMAIN-SUFFIX,dav.jianguoyun.com,DIRECT
+DOMAIN-SUFFIX,oneapi.icostapp.com,DIRECT
+
 
 # 字节跳动广告
 AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
