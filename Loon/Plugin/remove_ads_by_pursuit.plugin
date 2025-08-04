@@ -8,6 +8,7 @@
 alyp_enable = switch,true,false,tag=阿里云盘-脚本开关
 
 [Rule]
+DOMAIN,speech.platform.bing.com,DIRECT
 DOMAIN,dns.weixin.qq.com.cn,DIRECT
 DOMAIN,dns.weixin.qq.com,DIRECT
 DOMAIN-SUFFIX,qingtian618.com,DIRECT
