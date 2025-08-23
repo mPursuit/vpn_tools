@@ -8,6 +8,10 @@
 alyp_enable = switch,true,false,tag=阿里云盘-脚本开关
 
 [Rule]
+#!name=农行防代理检测
+DOMAIN,msmp.abchina.com.cn,REJECT
+
+
 DOMAIN,speech.platform.bing.com,DIRECT
 DOMAIN,dns.weixin.qq.com.cn,DIRECT
 DOMAIN,dns.weixin.qq.com,DIRECT
