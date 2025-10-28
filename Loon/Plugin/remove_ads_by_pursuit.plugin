@@ -15,7 +15,7 @@ DOMAIN,msmp.abchina.com.cn,REJECT
 DOMAIN,speech.platform.bing.com,DIRECT
 DOMAIN,dns.weixin.qq.com.cn,DIRECT
 DOMAIN,dns.weixin.qq.com,DIRECT
-DOMAIN-SUFFIX,qingtian618.com,DIRECT
+DOMAIN-SUFFIX,apple.com,DIRECT
 DOMAIN-SUFFIX,live.com,DIRECT
 DOMAIN-SUFFIX,microsoft.com,DIRECT
 DOMAIN-SUFFIX,microsoftonline.com,DIRECT
