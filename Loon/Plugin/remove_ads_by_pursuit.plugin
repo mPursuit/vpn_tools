@@ -23,7 +23,7 @@ DOMAIN-SUFFIX,speedtest.net,DIRECT
 DOMAIN-SUFFIX,dav.jianguoyun.com,DIRECT
 DOMAIN-SUFFIX,oneapi.icostapp.com,DIRECT
 DOMAIN-SUFFIX,airaphe.com,DIRECT
-
+DOMAIN-SUFFIX,linux.do,DIRECT
 
 # 字节跳动广告
 AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
