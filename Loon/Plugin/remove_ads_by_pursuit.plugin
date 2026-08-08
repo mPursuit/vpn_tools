@@ -8,6 +8,8 @@
 alyp_enable = switch,true,false,tag=阿里云盘-脚本开关
 
 [Rule]
+# 百度地图去首屏广告
+DOMAIN,sofire.baidu.com,REJECT-DICT
 # 农行防代理检测
 DOMAIN,msmp.abchina.com.cn,REJECT
 
@@ -76,7 +78,7 @@ DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 
 [Rewrite]
 #百度地图开屏
-^https:\/\/ecom\.map\.baidu\.com\/ad-ops\/afd\/entry\? reject-200
+#^https:\/\/ecom\.map\.baidu\.com\/ad-ops\/afd\/entry\? reject-200
 
 ^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs reject-200
 ^https?:\/\/dss0\.bdstatic\.com\/-0U0bnSm1A5BphGlnYG\/ reject-200
