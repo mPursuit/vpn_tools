@@ -13,19 +13,6 @@ DOMAIN,sofire.baidu.com,REJECT-DICT
 # 农行防代理检测
 DOMAIN,msmp.abchina.com.cn,REJECT
 
-
-DOMAIN,speech.platform.bing.com,DIRECT
-DOMAIN,dns.weixin.qq.com.cn,DIRECT
-DOMAIN,dns.weixin.qq.com,DIRECT
-DOMAIN-SUFFIX,apple.com,DIRECT
-DOMAIN-SUFFIX,live.com,DIRECT
-DOMAIN-SUFFIX,microsoft.com,DIRECT
-DOMAIN-SUFFIX,microsoftonline.com,DIRECT
-DOMAIN-SUFFIX,speedtest.net,DIRECT
-DOMAIN-SUFFIX,dav.jianguoyun.com,DIRECT
-DOMAIN-SUFFIX,oneapi.icostapp.com,DIRECT
-DOMAIN-SUFFIX,airaphe.com,DIRECT
-
 # 字节跳动广告
 AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
 # AND, ((DOMAIN-KEYWORD, -sign-), (DOMAIN-SUFFIX, tiktokcdn.com)), REJECT
